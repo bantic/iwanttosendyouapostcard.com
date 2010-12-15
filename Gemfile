@@ -8,6 +8,11 @@ gem 'rails'
 gem "pg"
 gem "haml"
 
+group :deployment do
+  gem "heroku"
+  gem "wirble"
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
