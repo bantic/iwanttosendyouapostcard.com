@@ -1,0 +1,6 @@
+%ul#recipients
+  - @destination.recipients.each do |recipient|
+    %li.recipient
+      .name= recipient.name
+      .address= recipient.address
+      .instructions= recipient.instructions

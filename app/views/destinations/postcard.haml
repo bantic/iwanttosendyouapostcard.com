@@ -1,0 +1,11 @@
+HI I am a postcard
+#postcard
+  = form_for [@destination, @recipient], :remote => true do |f|
+    #name_field
+      = f.text_field :name
+    #address_field
+      = f.text_field :address
+    #instruction_field
+      = f.text_field :instructions
+    #submit_field
+      = f.submit :submit

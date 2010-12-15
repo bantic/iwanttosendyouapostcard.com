@@ -1,4 +1,10 @@
 Boilerplate::Application.routes.draw do |map|
+  resources :destinations do
+    resources :recipients
+  end
+  
+  match "/from/:destination_id" => "destinations#postcard"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
