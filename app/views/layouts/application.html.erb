@@ -24,7 +24,8 @@
 
   <%- # CSS : implied media="all" -%>
   <%= stylesheet_link_tag 'application' %>
-
+  <%= stylesheet_link_tag 'iwant2' %>
+  
   <%- # Uncomment if you are specifically targeting less enabled mobile browsers -%>
   <%#= stylesheet_link_tag "handheld", :media => "handheld" %>
  
@@ -58,6 +59,7 @@
 
   <%= javascript_include_tag 'plugins' %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jquery.hint.js" %>
 
   <%- # Fix any <img> or .png_bg background-images -%>
   <!--[if lt IE 7 ]>

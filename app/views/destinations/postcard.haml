@@ -1,11 +1,25 @@
-HI I am a postcard
-#postcard
+#postcard{:style => "background-image: url(/images/st-john/stjohn.jpg)"}
+  %h1= @destination.name
   = form_for [@destination, @recipient], :remote => true do |f|
-    #name_field
-      = f.text_field :name
-    #address_field
-      = f.text_field :address
-    #instruction_field
-      = f.text_field :instructions
-    #submit_field
-      = f.submit :submit
+    #left_panel
+      #name_field
+        Dear
+        = f.text_field :name, :title => "Your name"
+        = ","
+      #text
+        %p
+          I'm having such a great time!
+          Today I went snorkeling and saw an eel.
+        %p
+          Wish you were here!
+        #signature
+          = image_tag "cory-sig.png"
+        
+    #right_panel
+      #address_field
+        TO:
+        = f.text_area :address, :title => "123 Main Street\nBrooklyn, NY\n11211\n(Your address)"
+      #instruction_field
+        = f.text_field :instructions
+      #submit_field
+        = f.submit :submit

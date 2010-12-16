@@ -1,0 +1,75 @@
+html, body
+  background: url(/images/sand.gif)
+
+@font-face 
+  font-family: 'AWConquerorSansLight'
+  src: url('/fonts/awconquerorsans-light-webfont.eot')
+  src: local('☺'), url('/fonts/awconquerorsans-light-webfont.woff') format('woff'), url('/fonts/awconquerorsans-light-webfont.ttf') format('truetype'), url('/fonts/awconquerorsans-light-webfont.svg#webfontlxoasgtc') format('svg')
+  font-weight: normal
+  font-style: normal
+
+#postcard
+  width: 900px
+  height: 500px
+  margin: 0 auto
+  -moz-box-shadow: 10px 10px 5px #888
+  -webkit-box-shadow: 10px 10px 5px #888
+  box-shadow: 10px 10px 5px #888
+  border-radius: 4px
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+  -webkit-transform: rotate(-0deg)
+  -moz-transform: rotate(-0deg)
+  position: relative
+  
+  #right_panel, #left_panel
+    position: absolute
+    width: 45%
+    height: 300px
+    padding: 10px
+    background: none
+    background: rgba(0, 0, 0, 0.25)
+    color: #000
+  
+  #right_panel
+    right: 10px
+  
+  #left_panel
+    left: 10px
+  
+  #signature
+    position: absolute
+    right: 10px
+    bottom: -100px
+  
+  #name_field
+    font-size: 28px
+    input
+      height: 34px
+      width: 200px
+      font-size: 28px
+      text-align: center
+  
+  #text
+    position: relative
+    padding-top: 20px
+    font-size: 18px
+    p
+      text-indent: 20px
+      margin-top: 10px
+      
+  #address_field
+    textarea
+      height: 60px
+      width: 200px
+      text-align: center
+      vertical-align: top
+  
+  h1
+    text-shadow: -2px 2px 10px rgba(0,0,0,.5)
+    text-align: center
+    font-size: 70px
+    opacity: 0.3
+    font-family: "AWConquerorSansLight"
+    font-weight: bold
+    text-transform: uppercase
