@@ -5,7 +5,7 @@
     #left_panel
       #name_field
         Dear
-        = f.text_field :name, :title => "Your name"
+        = f.text_field :name, :title => "Your name", :class => "required"
         = ","
       #text
         %p
@@ -19,7 +19,7 @@
     #right_panel
       #address_field
         TO:
-        = f.text_area :address, :title => "123 Main Street\nBrooklyn, NY\n11211\n(Your address)"
+        = f.text_area :address, :title => "123 Main Street\nBrooklyn, NY\n11211\n(Your address)", :class => "required"
     #instruction_field
       = f.text_field :instructions, :title => "Special Instructions/Requests Go Here. (Challenge me.)"
 
