@@ -3,11 +3,15 @@
   Happy Holidays!
   
 #postcard{:style => "background-image: url(/images/st-john/stjohn.jpg)"}
-  = image_tag "cancel_stamp.png", :id => "cancel_postage_stamp"
-  = image_tag "stamp.jpg", :id => "hidden_postage_stamp"
-  #stamp_target
-  %h1= @destination.name
   = form_for [@destination, @recipient], :remote => true do |f|
+    = image_tag "cancel_stamp.png", :id => "cancel_postage_stamp"
+    = image_tag "stamp.jpg", :id => "hidden_postage_stamp"
+    - if !@is_mobile_browser
+      #stamp_target
+    - else
+      #send_button= submit_tag "Send!"
+
+    %h1= @destination.name
     #left_panel
       #name_field
         Dear
@@ -29,8 +33,9 @@
     #instruction_field
       = f.text_field :instructions, :title => "Special Instructions/Requests Go Here. (Challenge me.)"
 
-#arrow
-  To send, drag the stamp.
-  %br
-  = image_tag "arrow.png"
-= image_tag "stamp.jpg", :id => "postage_stamp"
+- if !@is_mobile_browser
+  #arrow
+    To send, drag the stamp.
+    %br
+    = image_tag "arrow.png"
+  = image_tag "stamp.jpg", :id => "postage_stamp"
