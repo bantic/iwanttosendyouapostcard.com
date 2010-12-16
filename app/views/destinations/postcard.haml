@@ -1,4 +1,5 @@
 #postcard{:style => "background-image: url(/images/st-john/stjohn.jpg)"}
+  #stamp_target
   %h1= @destination.name
   = form_for [@destination, @recipient], :remote => true do |f|
     #left_panel
@@ -19,7 +20,11 @@
       #address_field
         TO:
         = f.text_area :address, :title => "123 Main Street\nBrooklyn, NY\n11211\n(Your address)"
-      #instruction_field
-        = f.text_field :instructions
-      #submit_field
-        = f.submit :submit
+    #instruction_field
+      = f.text_field :instructions, :title => "Special Instructions/Requests Go Here. (Challenge me.)"
+
+#arrow
+  To send, drag the stamp.
+  %br
+  = image_tag "arrow.png"
+= image_tag "stamp.jpg", :id => "postage_stamp"

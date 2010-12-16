@@ -9,23 +9,46 @@ html, body {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: "VAG-HandWrittenVAG-HandWritte";
+  src: url("/fonts/VAG-HandWritten-webfont.eot");
+  src: local("☺"), url("/fonts/VAG-HandWritten-webfont.woff") format("woff"), url("/fonts/VAG-HandWritten-webfont.ttf") format("truetype"), url("/fonts/VAG-HandWritten-webfont.svg#webfont5Vzp9gRJ") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+input.blur, textarea.blur {
+  color: #aaaaaa; }
+
+#postage_stamp {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg); }
+
+#arrow {
+  position: absolute;
+  top: 10px;
+  left: 140px; }
+
 #postcard {
   width: 900px;
   height: 500px;
-  margin: 0 auto;
+  margin: 50px auto;
   -moz-box-shadow: 10px 10px 5px #888888;
   -webkit-box-shadow: 10px 10px 5px #888888;
   box-shadow: 10px 10px 5px #888888;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
   position: relative; }
   #postcard #right_panel, #postcard #left_panel {
     position: absolute;
     width: 45%;
     height: 300px;
+    margin-top: 40px;
     padding: 10px;
     background: none;
     background: rgba(0, 0, 0, 0.25);
@@ -48,15 +71,29 @@ html, body {
   #postcard #text {
     position: relative;
     padding-top: 20px;
-    font-size: 18px; }
+    font-size: 36px; }
     #postcard #text p {
+      font-family: "VAG-HandWrittenVAG-HandWritte";
       text-indent: 20px;
       margin-top: 10px; }
-  #postcard #address_field textarea {
-    height: 60px;
-    width: 200px;
-    text-align: center;
-    vertical-align: top; }
+  #postcard #address_field {
+    font-size: 34px; }
+    #postcard #address_field textarea {
+      height: 120px;
+      width: 300px;
+      font-size: 24px;
+      text-align: center;
+      vertical-align: top; }
+  #postcard #instruction_field {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    #postcard #instruction_field input {
+      text-align: center;
+      font-size: 14px;
+      width: 400px; }
   #postcard h1 {
     text-shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -65,3 +102,19 @@ html, body {
     font-family: "AWConquerorSansLight";
     font-weight: bold;
     text-transform: uppercase; }
+
+#stamp_target.hover {
+  border: 2px solid blue; }
+
+#draggable {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red; }
+
+#stamp_target {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black; }
