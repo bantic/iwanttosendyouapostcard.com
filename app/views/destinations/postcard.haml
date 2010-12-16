@@ -1,4 +1,10 @@
+#thanks
+  Thanks, look in the mail in a couple of weeks.
+  Happy Holidays!
+  
 #postcard{:style => "background-image: url(/images/st-john/stjohn.jpg)"}
+  = image_tag "cancel_stamp.png", :id => "cancel_postage_stamp"
+  = image_tag "stamp.jpg", :id => "hidden_postage_stamp"
   #stamp_target
   %h1= @destination.name
   = form_for [@destination, @recipient], :remote => true do |f|

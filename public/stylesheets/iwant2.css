@@ -19,12 +19,31 @@ html, body {
 input.blur, textarea.blur {
   color: #aaaaaa; }
 
+#thanks {
+  font-size: 28px;
+  width: 250px;
+  margin: 200px auto;
+  display: none; }
+
 #postage_stamp {
   position: absolute;
   top: 40px;
   left: 30px;
   -webkit-transform: rotate(-3deg);
   -moz-transform: rotate(-3deg); }
+
+#hidden_postage_stamp {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none; }
+
+#cancel_postage_stamp {
+  z-index: 100;
+  position: absolute;
+  right: 70px;
+  top: 20px;
+  display: none; }
 
 #arrow {
   position: absolute;
@@ -34,7 +53,7 @@ input.blur, textarea.blur {
 #postcard {
   width: 900px;
   height: 500px;
-  margin: 50px auto;
+  margin: 120px auto;
   -moz-box-shadow: 10px 10px 5px #888888;
   -webkit-box-shadow: 10px 10px 5px #888888;
   box-shadow: 10px 10px 5px #888888;
@@ -60,7 +79,7 @@ input.blur, textarea.blur {
   #postcard #signature {
     position: absolute;
     right: 10px;
-    bottom: -100px; }
+    bottom: -80px; }
   #postcard #name_field {
     font-size: 28px; }
     #postcard #name_field input {
