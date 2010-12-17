@@ -26,7 +26,10 @@ $(document).ready( function() {
 
 function sendPostcard() {
   $("#postage_stamp").fadeOut(); $("#hidden_postage_stamp").fadeIn();
-  setTimeout( function() { $("#cancel_postage_stamp").fadeIn(); }, 500);
+  setTimeout( function() { 
+    $("#cancel_postage_stamp").fadeIn(); 
+    $("#tattoo").fadeIn();
+  }, 500);
   setTimeout( function() {
     $("#postcard").animate({left: "1000px"});
   }, 1500);
