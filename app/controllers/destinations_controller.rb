@@ -1,4 +1,6 @@
 class DestinationsController < ApplicationController
+  before_filter :authenticate, :except => [:postcard]
+  
   # GET /destinations
   # GET /destinations.xml
   def index

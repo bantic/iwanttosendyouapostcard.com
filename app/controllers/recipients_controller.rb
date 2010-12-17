@@ -1,5 +1,6 @@
 class RecipientsController < ApplicationController
   before_filter :get_destination
+  before_filter :authenticate, :only => [:index]
   
   def index
   end

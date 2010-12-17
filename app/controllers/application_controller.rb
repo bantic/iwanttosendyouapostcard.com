@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
 
   private
   
+  def authenticate
+     authenticate_or_request_with_http_basic do |user, password| 
+         user == ENV['USER'] && password == ENV['PASSWORD']
+     end
+  end
+  
   def test_for_mobile_browser
     if request.user_agent.to_s.downcase =~ Regexp.new(MOBILE_USER_AGENTS)
       @is_mobile_browser = true
