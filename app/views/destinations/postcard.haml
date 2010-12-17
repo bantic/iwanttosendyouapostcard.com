@@ -4,7 +4,7 @@
   
 #postcard{:style => "background-image: url(#{@destination.postcard_image})"}
   = form_for [@destination, @recipient], :remote => true do |f|
-    = image_tag "tattoo2.png", :id => "tattoo"
+    = image_tag "tattoo.png", :id => "tattoo"
     = image_tag "cancel_stamp.png", :id => "cancel_postage_stamp"
     = image_tag "stamp.jpg", :id => "hidden_postage_stamp"
     - if !@is_mobile_browser
