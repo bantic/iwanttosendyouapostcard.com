@@ -16,6 +16,9 @@ html, body {
   font-weight: normal;
   font-style: normal; }
 
+input {
+  z-index: 100; }
+
 input.blur, textarea.blur {
   color: #aaaaaa; }
 
@@ -29,8 +32,11 @@ input.blur, textarea.blur {
   position: absolute;
   top: 40px;
   left: 30px;
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg); }
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg); }
 
 #hidden_postage_stamp {
   position: absolute;
@@ -57,12 +63,17 @@ input.blur, textarea.blur {
   -moz-box-shadow: 10px 10px 5px #888888;
   -webkit-box-shadow: 10px 10px 5px #888888;
   box-shadow: 10px 10px 5px #888888;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=135, Color='#888888')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=135, Color='#888888');
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  -webkit-transform: rotate(-5deg);
+  position: relative;
   -moz-transform: rotate(-5deg);
-  position: relative; }
+  -o-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg); }
   #postcard #right_panel, #postcard #left_panel {
     position: absolute;
     width: 45%;

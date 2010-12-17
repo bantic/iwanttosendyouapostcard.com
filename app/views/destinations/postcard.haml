@@ -2,7 +2,7 @@
   Thanks, look in the mail in a couple of weeks.
   Happy Holidays!
   
-#postcard{:style => "background-image: url(/images/st-john/stjohn.jpg)"}
+#postcard{:style => "background-image: url(#{@destination.postcard_image})"}
   = form_for [@destination, @recipient], :remote => true do |f|
     = image_tag "cancel_stamp.png", :id => "cancel_postage_stamp"
     = image_tag "stamp.jpg", :id => "hidden_postage_stamp"
@@ -15,24 +15,22 @@
     #left_panel
       #name_field
         Dear
-        = f.text_field :name, :title => "Your name", :class => "required"
+        = f.text_field :name, :title => "Your name"
         = ","
       #text
+        %p= @destination.example_text
         %p
-          I'm having such a great time!
-          Today I went snorkeling and saw an eel.
-        %p
-          Wish you were here!
+          Wish you were here,
         #signature
           = image_tag "cory-sig.png"
         
     #right_panel
       #address_field
         TO:
-        = f.text_area :address, :title => "123 Main Street\nBrooklyn, NY\n11211\n(Your address)", :class => "required"
+        = f.text_area :address, :title => "#{@destination.example_address}\n(Your Address)"
     #instruction_field
       = f.text_field :instructions, :title => "Special Instructions/Requests Go Here. (Challenge me.)"
-
+    
 - if !@is_mobile_browser
   #arrow
     To send, drag the stamp.
