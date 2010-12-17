@@ -15,7 +15,7 @@ $.fn.hint = function (blurClass) {
             $win = $(window);
 
         function remove() {
-            var value_replaced = this.value.replace(/\s/g,"");
+            var value_replaced = (this.value || "").replace(/\s/g,"");
             var title_replaced = title.replace(/\s/g,"");
             if (value_replaced === title_replaced && $input.hasClass(blurClass)) {
                 $input.val('').removeClass(blurClass);
