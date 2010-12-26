@@ -13,8 +13,10 @@ class ApplicationController < ActionController::Base
   private
   
   def authenticate
-     authenticate_or_request_with_http_basic do |user, password| 
-         user == ENV['USER'] && password == ENV['PASSWORD']
+    unless Rails.env == "development"
+       authenticate_or_request_with_http_basic do |user, password| 
+           user == ENV['USER'] && password == ENV['PASSWORD']
+       end
      end
   end
   

@@ -11,6 +11,7 @@ gem "haml"
 group :deployment do
   gem "heroku"
   gem "wirble"
+  gem "taps"
 end
 
 # Use unicorn as the web server

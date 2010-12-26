@@ -4,3 +4,5 @@
       .name= recipient.name
       .address= recipient.address
       .instruction= recipient.instructions
+      = form_for [@destination, recipient], :remote => true do |f|
+        = f.check_box :sent_at, {:onclick => "$('#edit_recipient_#{recipient.id}').submit();"}

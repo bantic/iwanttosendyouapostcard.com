@@ -10,6 +10,17 @@ class RecipientsController < ApplicationController
     @recipient.save
   end
   
+  def update
+    @recipient = Recipient.find(params[:id])
+    if params[:recipient][:sent_at] == "1"
+      @recipient.sent_at = Time.now
+    else
+      @recipient.sent_at = nil
+    end
+    @recipient.save!
+    render :js => "alert('submitted');"
+  end
+  
   private
   def get_destination
     @destination = Destination.find_by_url_name(params[:destination_id])
